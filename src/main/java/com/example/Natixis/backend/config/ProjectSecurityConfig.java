@@ -33,7 +33,8 @@ public class ProjectSecurityConfig {
                         sessionManagementConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login").permitAll()
-                        .requestMatchers("/products/delete/**", "/products/addProduct").hasRole("ADMIN")
+                        .requestMatchers("/products/delete/**", "/products/addProduct",
+                                "/products/updateProduct/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 ).cors(corsConfig -> corsConfig.configurationSource(request -> {
                     // for the sake of the assignment I've allowed the the origins
