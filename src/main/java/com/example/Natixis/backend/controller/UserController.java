@@ -1,8 +1,8 @@
 package com.example.Natixis.backend.controller;
 
 import com.example.Natixis.backend.constants.ApplicationConstants;
-import com.example.Natixis.backend.model.LoginRequestDTO;
-import com.example.Natixis.backend.model.LoginResponseDTO;
+import com.example.Natixis.backend.dto.LoginRequestDTO;
+import com.example.Natixis.backend.dto.LoginResponseDTO;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +13,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
